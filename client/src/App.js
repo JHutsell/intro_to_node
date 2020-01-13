@@ -31,7 +31,7 @@ class App extends React.Component {
 
   callAPI() {
     fetch("http://localhost:9000/testAPI")
-      .then(resp => escape.text())
+      .then(resp => resp.text())
       .then(resp => this.setState({
         apiResponse: resp
         })
@@ -44,7 +44,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className= "App">
+      <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title">Intro to Node!!</h1>
